@@ -1,24 +1,16 @@
 plugins {
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
-    id 'kotlin-parcelize'
 }
 
 apply from: "$rootDir/android-compose-module.gradle"
 
 android {
-    namespace 'com.example.shacklehotelbuddy.mainscreen'
-
+    namespace 'com.example.shacklehotelbuddy.theme'
     buildTypes {
         release {
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt')
         }
     }
-}
-dependencies {
-    implementation project(":strings")
-    implementation project(':theme')
-
-    implementation("org.jetbrains.kotlinx:kotlinx-collections-immutable:0.3.5")
 }

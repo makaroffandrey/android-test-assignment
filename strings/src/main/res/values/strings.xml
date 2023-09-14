@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="search_screen_title">Select guests, date and time</string>
+    <string name="search_screen_search">Search</string>
+    <string name="search_screen_check_in_date">Check-in date</string>
+    <string name="search_screen_check_out_date">Check-out date</string>
+    <string name="search_screen_date_placeholder">DD / MM / YYYY</string>
+    <string name="search_screen_adults">Adults</string>
+    <string name="search_screen_children">Children</string>
+    <string name="search_screen_recent_searches">Recent searches</string>
+    <string name="ok">OK</string>
+    <string name="search_screen_no_recent_searches">Your recent searches will appear here</string>
+    <plurals name="search_screen_number_of_adults">
+        <item quantity="one">%d adult</item>
+        <item quantity="other">%d adults</item>
+    </plurals>
+
+    <plurals name="search_screen_number_of_children">
+        <item quantity="one">%d child</item>
+        <item quantity="other">%d children</item>
+    </plurals>
+    <string name="search_screen_recent_date_range">%s - %s</string>
+    <string name="search_screen_recent_adults_children">%s, %s</string>
+</resources>

@@ -3,7 +3,7 @@ plugins {
     id 'org.jetbrains.kotlin.android'
 }
 
-apply from: "$rootDir/android-module.gradle"
+apply from: "$rootDir/android-compose-module.gradle"
 
 android {
     namespace 'com.example.shacklehotelbuddy'
@@ -24,6 +24,7 @@ android {
 
 dependencies {
     implementation project(':mainscreen')
+    implementation project(':theme')
     implementation 'androidx.activity:activity-compose:1.7.2'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
