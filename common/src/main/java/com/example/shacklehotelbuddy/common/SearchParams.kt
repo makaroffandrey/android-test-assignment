@@ -1,4 +1,4 @@
-package com.example.shacklehotelbuddy.mainscreen
+package com.example.shacklehotelbuddy.common
 
 import android.os.Parcelable
 import androidx.compose.runtime.Immutable

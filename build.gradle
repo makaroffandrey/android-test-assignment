@@ -9,4 +9,6 @@ ext {
     projectMinSdk = 26
     projectTargetSdk = 34
     projectCompileSdk = 34
+    kotlinxImmutableVersion = "0.3.5"
+    moshiVersion = '1.12.0'
 }

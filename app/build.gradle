@@ -5,27 +5,36 @@ plugins {
 
 apply from: "$rootDir/android-compose-module.gradle"
 
+Properties properties = new Properties()
+properties.load(project.rootProject.file('local.properties').newDataInputStream())
+def apiKey = properties.getProperty('hotels.api.key')
+
 android {
     namespace 'com.example.shacklehotelbuddy'
+
+    buildFeatures {
+        buildConfig = true
+    }
 
     defaultConfig {
         applicationId "com.example.shacklehotelbuddy"
         versionCode 1
         versionName "1.0"
-    }
+        buildConfigField "String", "HOTEL_API_URL", "\"hotels4.p.rapidapi.com\""
+        buildConfigField "String", "HOTEL_API_KEY", "\"$apiKey\""
 
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-        }
     }
 }
 
 dependencies {
     implementation project(':mainscreen')
     implementation project(':theme')
+    implementation project(':networking')
+    implementation project(':common')
+    implementation project(':searchresults')
     implementation 'androidx.activity:activity-compose:1.7.2'
+    implementation "com.squareup.moshi:moshi:$moshiVersion"
+    implementation "com.squareup.moshi:moshi-kotlin:$moshiVersion"
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'

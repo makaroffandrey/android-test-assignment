@@ -43,6 +43,7 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.example.shacklehotelbuddy.common.SearchParams
 import com.example.shacklehotelbuddy.theme.ShackleHotelBuddyTheme
 import java.time.Instant
 import java.time.LocalDate

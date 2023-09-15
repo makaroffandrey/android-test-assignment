@@ -6,12 +6,11 @@ plugins {
 apply from: "$rootDir/android-compose-module.gradle"
 
 android {
-    namespace 'com.example.shacklehotelbuddy.mainscreen'
+    namespace 'com.example.shacklehotelbuddy.searchresults'
 }
 dependencies {
     implementation project(':strings')
-    implementation project(':theme')
+    implementation project(':networking')
     implementation project(':common')
-
-    implementation("org.jetbrains.kotlinx:kotlinx-collections-immutable:$kotlinxImmutableVersion")
+    implementation project(':theme')
 }
